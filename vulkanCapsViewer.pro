@@ -37,6 +37,14 @@ android {
     MOBILITY =
     LIBS += -landroid
 }
+osx {
+    LIBS += "$$PWD/libs/vulkan/libvulkan.dylib"
+    #LIBS += -lvulkan
+    #QT += x11extras
+    target.path = /usr/local/bin
+    INSTALLS += target
+    #todo: other linux targets
+}
 DEPENDPATH += .
 MOC_DIR += ./GeneratedFiles/release
 OBJECTS_DIR += release
